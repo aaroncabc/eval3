@@ -2,6 +2,7 @@
 #include <stdlib.h>
 #include "csv.h"
 #include "dbscan.h"
+#include "matrix.h"
 #include "umap.h"
 
 int main(void) {

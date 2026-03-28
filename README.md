@@ -23,28 +23,24 @@ Este proyecto implementa un pipeline de análisis de datos con DBSCAN y UMAP en 
 1. Generar los datos sintéticos (si no existieran):
 
 ```bash
-cd c:/Users/aaron/Desktop/eval3_IA/eval3
 python scripts/generate_data.py
 ```
 
 2. Compilar y ejecutar el pipeline C local:
 
 ```bash
-cd c:/Users/aaron/Desktop/eval3_IA/eval3
 bash scripts/run_c.sh
 ```
 
 3. Ejecutar la comparación rápida (local):
 
 ```bash
-cd c:/Users/aaron/Desktop/eval3_IA/eval3
 bash scripts/run_comparison.sh
 ```
 
 4. (Opcional) Iniciar Jupyter local si se desea:
 
 ```bash
-cd c:/Users/aaron/Desktop/eval3_IA/eval3
 jupyter notebook
 ```
 
@@ -53,14 +49,12 @@ jupyter notebook
 1. Generar los datos sintéticos y pipeline C dentro de contenedor:
 
 ```bash
-cd c:/Users/aaron/Desktop/eval3_IA/eval3
 docker-compose run --rm c-builder
 ```
 
 2. Iniciar servidor Jupyter en contenedor para análisis comparativo:
 
 ```bash
-cd c:/Users/aaron/Desktop/eval3_IA/eval3
 docker-compose up jupyter
 ```
 

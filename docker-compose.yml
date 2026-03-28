@@ -6,7 +6,7 @@ services:
       dockerfile: docker/Dockerfile.c
     volumes:
       - .:/app
-    command: "/bin/bash -c 'make all && ./eval3_c'"
+    command: "/bin/sh -c 'make all && ./eval3_c'"
 
   jupyter:
     build:
