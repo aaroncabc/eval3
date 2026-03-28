@@ -11,7 +11,7 @@ int *dbscan(const Matrix *data, double eps, int minPts) {
     for (int i = 0; i < n; i++) {
         if (labels[i] != -1) continue;
 
-        int *neighbors = malloc(sizeof(int) * n);
+        int *neighbors = malloc(sizeof(int) * n * n);
         int ncount = 0;
         for (int j = 0; j < n; j++) {
             if (euclidean(data, i, j) <= eps) {
@@ -24,10 +24,9 @@ int *dbscan(const Matrix *data, double eps, int minPts) {
         labels[i] = cluster_id;
         for (int idx = 0; idx < ncount; idx++) {
             int j = neighbors[idx];
-            if (labels[j] == -1) labels[j] = cluster_id;
             if (labels[j] != -1) continue;
             labels[j] = cluster_id;
-            int *neighbors2 = malloc(sizeof(int) * n);
+            int *neighbors2 = malloc(sizeof(int) * n * n);
             int ncount2 = 0;
             for (int k = 0; k < n; k++) {
                 if (euclidean(data, j, k) <= eps) {

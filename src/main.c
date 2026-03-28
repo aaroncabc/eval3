@@ -6,6 +6,7 @@
 #include "umap.h"
 
 int main(void) {
+    printf("Starting C pipeline\n");
     const char *input_path = "data/input/synthetic.csv";
     const char *labels_path = "data/output/dbscan_labels.csv";
     const char *embed_path = "data/output/umap_embedding.csv";
@@ -24,8 +25,10 @@ int main(void) {
         free_matrix(&data);
         return 1;
     }
+    printf("DBSCAN done\n");
 
     Matrix emb = umap_embed(&data, 2);
+    printf("UMAP done\n");
 
     save_labels(labels_path, labels, data.rows);
     save_csv(embed_path, &emb, "x,y");
