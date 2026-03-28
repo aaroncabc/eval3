@@ -50,13 +50,6 @@ python scripts/run_comparison.py
 ```
 
 
-4. (Opcional) Jupyter para análisis interactivo:
-```bash
-docker-compose up jupyter
-# Abrir http://localhost:8888 para explorar resultados si se desea.
-```
-
-
 ## 4. Salidas generadas
 - `data/output/dbscan_labels.csv`: Labels de clusters C.
 - `data/output/umap_embedding.csv`: Embedding UMAP C (2D).
